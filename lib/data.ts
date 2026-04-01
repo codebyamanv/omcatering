@@ -1,0 +1,274 @@
+export const services = [
+  {
+    id: 'catering',
+    title: 'Catering Services',
+    shortDescription: 'Exquisite multi-cuisine vegetarian delicacies for all occasions',
+    description: 'From intimate gatherings to grand weddings, our expert chefs prepare pure vegetarian dishes that delight every palate. We specialize in North Indian, South Indian, Chinese, and traditional Rajasthani cuisines.',
+    icon: 'UtensilsCrossed',
+    features: [
+      'Multi-cuisine vegetarian menu',
+      'Customized menus for every event',
+      'Live cooking stations',
+      'Professional service staff',
+      'Hygienic food preparation',
+      'On-time delivery guaranteed'
+    ],
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=800',
+    categories: ['Wedding Catering', 'Corporate Events', 'Birthday Parties', 'Festival Celebrations']
+  },
+  {
+    id: 'travel',
+    title: 'Tour & Travels',
+    shortDescription: 'Pan-India tour packages crafted for unforgettable experiences',
+    description: 'Explore the diverse beauty of India with our carefully curated tour packages. From the snowy peaks of Himalayas to the serene backwaters of Kerala, we make every journey memorable.',
+    icon: 'Map',
+    features: [
+      'Customized holiday packages',
+      'Adventure tours',
+      'Pilgrimage tours',
+      'Group & family tours',
+      'Hotel bookings',
+      '24/7 travel support'
+    ],
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800',
+    categories: ['North India Tours', 'South India Tours', 'Pilgrimage Tours', 'Adventure Tours']
+  },
+  {
+    id: 'events',
+    title: 'Event Planning',
+    shortDescription: 'End-to-end event management for celebrations that last a lifetime',
+    description: 'Be it a fairy-tale wedding, a corporate gala, or an intimate birthday party, our event planning team ensures every detail is perfect. We transform your vision into an unforgettable reality.',
+    icon: 'Sparkles',
+    features: [
+      'Wedding planning & decoration',
+      'Corporate event management',
+      'Birthday & anniversary celebrations',
+      'Theme parties',
+      'Entertainment arrangement',
+      'Complete event coordination'
+    ],
+    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800',
+    categories: ['Wedding Events', 'Corporate Events', 'Private Parties', 'Special Occasions']
+  },
+  {
+    id: 'vehicles',
+    title: 'Vehicle Rental',
+    shortDescription: 'Premium fleet of well-maintained vehicles for every need',
+    description: 'Travel in comfort and style with our diverse fleet of vehicles. From luxury cars for weddings to spacious buses for group travel, we have the perfect vehicle for every occasion.',
+    icon: 'Car',
+    features: [
+      'Luxury cars (Audi, BMW, Mercedes)',
+      'Wedding decoration vehicles',
+      'Tempo Travellers & Minibuses',
+      'Luxury buses for groups',
+      'AC & Non-AC options',
+      'Professional chauffeurs'
+    ],
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800',
+    categories: ['Luxury Cars', 'Wedding Vehicles', 'Group Transport', 'Airport Transfers']
+  }
+];
+
+export const tourPackages = [
+  {
+    id: 1,
+    name: 'Golden Triangle Tour',
+    location: 'Delhi - Agra - Jaipur',
+    duration: '5 Nights / 6 Days',
+    price: 14500,
+    image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800',
+    inclusions: ['Hotels', 'Breakfast', 'AC Transport', 'Guide', 'Temple Visits'],
+    featured: true,
+    category: 'North India'
+  },
+  {
+    id: 2,
+    name: 'Kerala Backwaters',
+    location: 'Cochin - Munnar - Alleppey',
+    duration: '4 Nights / 5 Days',
+    price: 18500,
+    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800',
+    inclusions: ['Houseboat', 'Breakfast', 'Sightseeing', 'Airport Transfer'],
+    featured: true,
+    category: 'South India'
+  },
+  {
+    id: 3,
+    name: 'Rajasthan Heritage',
+    location: 'Jaipur - Jodhpur - Udaipur',
+    duration: '6 Nights / 7 Days',
+    price: 22000,
+    image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800',
+    inclusions: ['Heritage Hotels', 'Breakfast', 'Cultural Shows', 'Desert Safari'],
+    featured: false,
+    category: 'North India'
+  },
+  {
+    id: 4,
+    name: 'Goa Beach Paradise',
+    location: 'North Goa - South Goa',
+    duration: '3 Nights / 4 Days',
+    price: 9800,
+    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800',
+    inclusions: ['Beach Resort', 'Breakfast', 'Water Sports', 'Nightlife'],
+    featured: false,
+    category: 'West India'
+  },
+  {
+    id: 5,
+    name: 'Himalayan Adventure',
+    location: 'Shimla - Manali - Dharamshala',
+    duration: '6 Nights / 7 Days',
+    price: 16800,
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800',
+    inclusions: ['Mountain Hotels', 'Breakfast', 'Trekking', 'Adventure Activities'],
+    featured: true,
+    category: 'North India'
+  },
+  {
+    id: 6,
+    name: 'Varanasi Spiritual',
+    location: 'Varanasi - Prayagraj - Sarnath',
+    duration: '3 Nights / 4 Days',
+    price: 7500,
+    image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800',
+    inclusions: ['Ganges View Hotel', 'Breakfast', 'Priest Services', 'Boat Ride'],
+    featured: false,
+    category: 'Pilgrimage'
+  },
+  {
+    id: 7,
+    name: 'Madhya Pradesh Heritage',
+    location: 'Bhopal - Sanchi - Khajuraho',
+    duration: '4 Nights / 5 Days',
+    price: 12500,
+    image: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?w=800',
+    inclusions: ['Palace Hotels', 'Breakfast', 'UNESCO Sites', 'Cultural Shows'],
+    featured: false,
+    category: 'Central India'
+  },
+  {
+    id: 8,
+    name: 'Northeast Explorer',
+    location: 'Gangtok - Darjeeling - Kalimpong',
+    duration: '5 Nights / 6 Days',
+    price: 19500,
+    image: 'https://images.unsplash.com/photo-1553864018-0bd磁悬浮8?w=800',
+    inclusions: ['Tea Garden Stay', 'Breakfast', 'Mountain Views', 'Adventure'],
+    featured: true,
+    category: 'East India'
+  }
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: 'Priya Sharma',
+    event: 'Wedding Catering',
+    location: 'Jaipur',
+    quote: 'Om Catering made our wedding absolutely magical! The food was exceptional - every guest complimented the variety and taste. The live cooking stations were a huge hit!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200'
+  },
+  {
+    id: 2,
+    name: 'Rajesh Mehta',
+    event: 'Corporate Event',
+    location: 'Mumbai',
+    quote: 'We hired Om Catering for our annual corporate gala. Professional service, on-time delivery, and the food quality was outstanding. Highly recommend for business events!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200'
+  },
+  {
+    id: 3,
+    name: 'Anita Desai',
+    event: 'Tour Package',
+    location: 'Kerala',
+    quote: 'Our family trip to Kerala was perfectly organized by Om Travels. The houseboat stay, sightseeing, and hotel bookings were all top-notch. Will definitely book again!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200'
+  },
+  {
+    id: 4,
+    name: 'Vikram Singh',
+    event: 'Wedding Planning',
+    location: 'Udaipur',
+    quote: 'They handled our destination wedding in Udaipur flawlessly. From decoration to logistics, everything was perfect. Our guests are still talking about it!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200'
+  },
+  {
+    id: 5,
+    name: 'Sunita Verma',
+    event: 'Vehicle Rental',
+    location: 'Delhi',
+    quote: 'Booked a luxury bus for our family reunion. Vehicle was spotless, driver was professional, and the entire trip was comfortable. Great service!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200'
+  }
+];
+
+export const whyChooseUs = [
+  {
+    title: '15+ Years Experience',
+    description: 'Over a decade and a half of creating memorable events and journeys',
+    icon: 'Award'
+  },
+  {
+    title: '10,000+ Events Served',
+    description: 'From intimate gatherings to grand celebrations across India',
+    icon: 'Star'
+  },
+  {
+    title: '100% Vegetarian',
+    description: 'Pure vegetarian cuisine prepared with utmost hygiene',
+    icon: 'Heart'
+  },
+  {
+    title: 'Pan-India Presence',
+    description: 'Serving clients across all major cities in India',
+    icon: 'MapPin'
+  },
+  {
+    title: '24/7 Support',
+    description: 'Round-the-clock customer support for all your needs',
+    icon: 'Phone'
+  },
+  {
+    title: 'Customized Solutions',
+    description: 'Tailored services to match your unique requirements',
+    icon: 'Settings'
+  }
+];
+
+export const galleryImages = [
+  { id: 1, category: 'Wedding', src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800', alt: 'Wedding decoration' },
+  { id: 2, category: 'Food', src: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800', alt: 'Catering food display' },
+  { id: 3, category: 'Travel', src: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800', alt: 'Travel adventure' },
+  { id: 4, category: 'Vehicle', src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800', alt: 'Luxury vehicles' },
+  { id: 5, category: 'Wedding', src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800', alt: 'Wedding setup' },
+  { id: 6, category: 'Food', src: 'https://images.unsplash.com/photo-1560078458-3f3a5b1b0b1a?w=800', alt: 'Food stall' },
+  { id: 7, category: 'Event', src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800', alt: 'Corporate event' },
+  { id: 8, category: 'Travel', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800', alt: 'Mountain scenery' },
+  { id: 9, category: 'Wedding', src: 'https://images.unsplash.com/photo-1529543544277-750e5b3e0a8b?w=800', alt: 'Wedding venue' },
+  { id: 10, category: 'Food', src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800', alt: 'Thali presentation' },
+  { id: 11, category: 'Event', src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800', alt: 'Party event' },
+  { id: 12, category: 'Vehicle', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800', alt: 'Wedding car' }
+];
+
+export const companyInfo = {
+  name: 'Om Catering Tour, Travels & Event Planners',
+  tagline: 'Your One-Stop Solution for Catering, Travel & Events',
+  phone: '+91 98290 12345',
+  altPhone: '+91 141 2745678',
+  email: 'info@omcatering.in',
+  whatsapp: '919829012345',
+  address: '78, Vaishali Nagar, Near Ahinsa Circle, Jaipur, Rajasthan 302021',
+  googleMapsUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.1234567890!2d75.7871234567890!3d26.9123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU0JzQ0LjEiTiA3NcKwNDcnMTIuNSJF!5e0!3m2!1sen!2sin!4v1234567890123',
+  social: {
+    facebook: 'https://facebook.com/omcatering',
+    instagram: 'https://instagram.com/omcatering',
+    whatsapp: 'https://wa.me/919829012345'
+  },
+  timings: 'Mon - Sun: 9:00 AM - 9:00 PM'
+};
