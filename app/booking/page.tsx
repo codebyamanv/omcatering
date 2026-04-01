@@ -440,7 +440,7 @@ export default function BookingPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative py-20 overflow-hidden bg-cream">
+            <section className="relative py-20 overflow-hidden bg-cream pt-20">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

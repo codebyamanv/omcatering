@@ -37,7 +37,7 @@ export default function PackagesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-32 overflow-hidden pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{

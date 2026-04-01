@@ -16,50 +16,27 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   useEffect(() => {
     setIsMobileMenuOpen(false)
   }, [pathname])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-2'
-          : 'bg-transparent py-4'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
       <div className="container-custom">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div
-              className={`w-12 h-12 rounded-full flex items-center justify-center font-heading font-bold text-xl transition-colors ${
-                isScrolled ? 'bg-primary text-white' : 'bg-white text-primary'
-              }`}
-            >
+            <div className="w-12 h-12 rounded-full flex items-center justify-center font-heading font-bold text-xl bg-primary text-white">
               OC
             </div>
             <div className="hidden sm:block">
-              <h1 className={`font-heading font-bold text-lg leading-tight transition-colors ${
-                isScrolled ? 'text-dark' : 'text-white'
-              }`}>
+              <h1 className="font-heading font-bold text-lg leading-tight text-dark">
                 Om Catering
               </h1>
-              <p className={`text-xs transition-colors ${
-                isScrolled ? 'text-gray-600' : 'text-white/80'
-              }`}>
+              <p className="text-xs text-gray-600">
                 Tour, Travels & Events
               </p>
             </div>
@@ -72,9 +49,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`font-medium transition-colors relative group ${
-                  isScrolled ? 'text-dark' : 'text-white'
-                } ${
-                  pathname === link.href ? 'text-primary' : ''
+                  pathname === link.href ? 'text-primary' : 'text-dark hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -91,9 +66,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+919829012345"
-              className={`flex items-center gap-2 font-semibold transition-colors ${
-                isScrolled ? 'text-primary' : 'text-white'
-              }`}
+              className="flex items-center gap-2 font-semibold text-primary"
             >
               <Phone className="w-4 h-4" />
               <span>+91 98290 12345</span>
@@ -109,9 +82,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-dark hover:bg-gray-100' : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-lg text-dark hover:bg-gray-100"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
