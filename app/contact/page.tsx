@@ -5,12 +5,6 @@ import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Navigation } from 'luc
 import { companyInfo } from '@/lib/data'
 import { useState } from 'react'
 
-const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-}
-
 export default function ContactPage() {
     const [result, setResult] = useState('')
     const handleSubmit = async (e: any) => {
@@ -21,10 +15,11 @@ export default function ContactPage() {
         const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData,
-        })  
+        })
 
         const data = await response.json()
         setResult(data.success ? 'Success!' : 'Error')
+        e.target.reset()
     }
 
     return (
