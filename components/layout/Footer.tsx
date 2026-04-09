@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react'
 import { companyInfo } from '@/lib/data'
 import Image from 'next/image'
 
@@ -29,30 +29,30 @@ export default function Footer() {
                             Creating memorable experiences since 2009.
                         </p>
                         <div className="flex gap-4">
-                            <a
+                            {/* <a
                                 href={companyInfo.social.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
                             >
                                 <Facebook className="w-5 h-5" />
-                            </a>
-                            <a
+                            </a> */}
+                            <Link
                                 href={companyInfo.social.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
                             >
                                 <Instagram className="w-5 h-5" />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href={`https://wa.me/${companyInfo.whatsapp}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
                             >
-                                <Twitter className="w-5 h-5" />
-                            </a>
+                                <MessageCircle className="w-5 h-5" />
+                            </Link>
                         </div>
                     </div>
 

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Navigation } from 'lucide-react'
 import { companyInfo } from '@/lib/data'
+import { useState } from 'react'
 
 const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -11,9 +12,19 @@ const fadeInUp = {
 }
 
 export default function ContactPage() {
-    const handleSubmit = (e: React.FormEvent) => {
+    const [result, setResult] = useState('')
+    const handleSubmit = async (e: any) => {
         e.preventDefault()
-        alert('Thank you for your inquiry! We will get back to you within 24 hours.')
+        const formData = new FormData(e.target)
+        formData.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY as string)
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })  
+
+        const data = await response.json()
+        setResult(data.success ? 'Success!' : 'Error')
     }
 
     return (
@@ -64,6 +75,7 @@ export default function ContactPage() {
                                         <input
                                             type="text"
                                             required
+                                            name="fullname"
                                             placeholder="Enter your full name"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors"
                                         />
@@ -73,6 +85,7 @@ export default function ContactPage() {
                                         <input
                                             type="tel"
                                             required
+                                            name="phone"
                                             placeholder="+91 XXXXX XXXXX"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors"
                                         />
@@ -84,6 +97,7 @@ export default function ContactPage() {
                                     <input
                                         type="email"
                                         required
+                                        name="email"
                                         placeholder="your@email.com"
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors"
                                     />
@@ -91,7 +105,10 @@ export default function ContactPage() {
 
                                 <div>
                                     <label className="block text-sm font-medium mb-2">Service Interested In</label>
-                                    <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors">
+                                    <select
+                                        name="service"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors"
+                                    >
                                         <option value="">Select a service</option>
                                         <option value="catering">Catering Services</option>
                                         <option value="travel">Tour & Travels</option>
@@ -107,6 +124,7 @@ export default function ContactPage() {
                                     <textarea
                                         required
                                         rows={5}
+                                        name="message"
                                         placeholder="Tell us about your requirements, event date, expected guest count, etc."
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary transition-colors resize-none"
                                     />

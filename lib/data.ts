@@ -325,14 +325,14 @@ export const companyInfo = {
     tagline: 'Your One-Stop Solution for Catering, Travel & Events',
     phone: '+91 83188 36649',
     altPhone: '+91 79854 72949',
-    email: 'info@omcatering.in',
+    email: 'omcateringandtravels2@gmail.com',
     whatsapp: '+917985472949',
     address: 'B38/51 Tulsipur, Mahmoorganj, Varanasi, Uttar Pradesh, 221010',
     googleMapsUrl:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.7745954363328!2d82.9757251945052!3d25.300708725667878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e33dee26c040f%3A0x39c8cbdb1150d682!2sOM%20Catering%20%2C%20Tour%20And%20Travels%20%26%20Event%20Planners!5e0!3m2!1sen!2sin!4v1775715248118!5m2!1sen!2sin',
     social: {
-        facebook: 'https://facebook.com/omcatering',
-        instagram: 'https://instagram.com/omcatering',
+        // facebook: 'https://facebook.com/omcatering',
+        instagram: 'https://www.instagram.com/om_catering_travel',
         whatsapp: 'https://wa.me/+917985472949',
     },
     timings: 'Mon - Sun: 9:00 AM - 9:00 PM',
