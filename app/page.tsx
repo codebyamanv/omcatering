@@ -42,18 +42,15 @@ export default function HomePage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-                {/* Background Image */}
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-8">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{
                         backgroundImage: "url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920')",
                     }}
                 />
-                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-navy/80 to-primary/40" />
 
-                {/* Content */}
                 <div className="relative z-10 container-custom text-center text-white">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -496,11 +493,7 @@ export default function HomePage() {
                             </div>
                         </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
+                        <div>
                             <form className="bg-cream rounded-2xl p-8 shadow-lg">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                     <div>
@@ -550,7 +543,7 @@ export default function HomePage() {
                                     Send Inquiry
                                 </button>
                             </form>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
